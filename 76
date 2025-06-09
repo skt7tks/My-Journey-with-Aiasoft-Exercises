@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s1, s2;
+    cin >> s1 >> s2;
+    string s3 = s1 + s2;
+    int n = s3.size();
+
+    if (n % 2 != 0) {
+        cout << "no";
+        return 0;
+    }
+
+    sort(s3.begin(), s3.end());
+
+    int x = 0;
+    for (int i = 0; i < n; i++) {
+        if (s3[i] != s3[i+1]) {
+            x = i;
+            if ((x + 1) % 2 != 0) {
+                cout << "no" << endl;
+                return 0;
+            }
+            
+        }
+    }
+
+    cout << "yes" << endl;
+cin.get();
+cin.get();
+return 0;
+}
