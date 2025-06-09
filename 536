@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+    int c = 0;
+
+    string x = "abcdefghijklmnopqrstuvwxyz";
+
+    for (int i = 0; i < 26; i++) {
+        bool found = false;
+        for (int j = 0; j < s.size(); j++) {
+            if (s[j] == x[i]) {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            cout << x[i] <<" ";
+        } else {
+            c++;
+        }
+    }
+
+    if (c == 26) {
+        cout << "Complete";
+    }
+
+    cin.get();
+    cin.get();
+    return 0;
+}
