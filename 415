@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int calculateNewDay(int currentDay, int currentHour, int hoursToAdd) {
+    const int daysInWeek = 7;
+    int totalHours = currentHour + hoursToAdd;
+    int newDay = (currentDay + (totalHours / 24)) % daysInWeek;
+    if (newDay == 0) {
+        newDay = daysInWeek;
+    }
+    return newDay;
+}
+int main() {
+    int currentDay, currentHour;
+    cin >> currentDay;
+    cin >> currentHour;
+    int hoursToAdd;
+    cin >> hoursToAdd;
+    int newDay = calculateNewDay(currentDay, currentHour, hoursToAdd);
+    cout << newDay << endl;
+
+    return 0;
+}
