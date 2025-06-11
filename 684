@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y;
+    int n, m;
+    cin >> x >> y;
+    cin >> n >> m;
+
+    int r = x * n + y * m;
+    int q = r / 100;
+    int w = r % 100;
+
+    if (w % 5 == 1) {
+        w += 4;
+    } else if (w % 5 == 2) {
+        w += 3;
+    } else if (w % 5 == 3) {
+        w += 2;
+    } else if (w % 5 == 4) {
+        w += 1;
+    }
+
+    if (w >= 100) {
+        w %= 100;
+        if (w % 5 == 1) {
+            w += 4;
+        } else if (w % 5 == 2) {
+            w += 3;
+        } else if (w % 5 == 3) {
+            w += 2;
+        } else if (w % 5 == 4) {
+            w += 1;
+        }
+        cout << q + 1 << " " << w << endl;
+    } else {
+        cout << q << " " << w << endl;
+    }
+
+    return 0;
+}
