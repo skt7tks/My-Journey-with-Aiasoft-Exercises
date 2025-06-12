@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+int n, m, b;
+cin>>n>>m>>b;
+if (b%m>0) cout<<b/m+1<<" "<<b%m;
+    else cout<<b/m<<" "<<m;
+
+cin.get();
+cin.get();
+return 0;
+}
