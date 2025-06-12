@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char x;
+    int a, b;
+    while (cin >> a >> x >> b) {
+    
+        if (a > b) {
+            cout << a - b << endl;
+        } else {
+            cout << "0" << endl;
+        }
+    }
+
+    return 0;
+}
