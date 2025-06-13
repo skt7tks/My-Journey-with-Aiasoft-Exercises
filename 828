@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+string s;
+char x;
+cin>>s>>x;
+int n=s.size();
+int count=0, i;
+x=tolower(x);
+for (i=0; i<n; i++){
+    s[i]=tolower(s[i]);
+    if (s[i]==x) {count++;}
+}
+cout<<count<<endl;
+
+cin.get();
+cin.get();
+return 0;
+}
