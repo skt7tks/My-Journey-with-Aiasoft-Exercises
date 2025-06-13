@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+string s;
+cin >> s;
+int n = s.size();
+int count = 0;
+for (int i = 0; i < n; i++) {
+    if (s[i] == '(') {
+        count++;
+    } else if (s[i] == ')') {
+        count--;
+    }
+    if (count < 0) {
+        cout << "NO";
+        return 0;
+    }
+}
+if (count == 0) {
+    cout << "YES";
+} else {
+    cout << "NO";
+}
+cin.get();
+cin.get();
+return 0;
+}
