@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+int main() {
+string str1, str2;
+cin >> str1 >> str2;
+transform(str1.begin(), str1.end(), str1.begin(), ::tolower);
+transform(str2.begin(), str2.end(), str2.begin(), ::tolower);
+int n = str1.size();
+int m = str2.size();
+int count = 0;
+sort(str2.begin(), str2.end());
+for (int i = 0; i < m - 1; i++) {
+        if (str2[i] == str2[i + 1]) {
+            str2.erase(i, 1);
+            i--;
+            m = str2.length();
+        }
+    }
+for (int i = 0; i < m; i++) {
+    char x = str2[i];
+    for (int j = 0; j < n; j++) {
+        if (str1[j] == x) {
+            count++;
+        }
+    }
+}
+cout << count << endl;
+cin.get();
+cin.get();
+return 0;
+}
