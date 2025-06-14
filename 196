@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+string s;
+cin>>s;
+int n=s.size();
+int c=0, d=0, z=0;
+for (int i=0; i<n; i++){
+        char x=s[i];
+    if (x>=48 && x<=57) {c++;}
+        else if (x>=65 && x<=90) {d++;}
+            else if(x>=97 && x<=122) {z++;}
+}
+
+cout<<c<<" "<<d<<" "<<z<<endl;
+
+cin.get();
+cin.get();
+return 0;
+}
