@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int x = 0;
+
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) {
+            x = x + i;
+        }
+    }
+
+    if (x < n) {
+        cout << "defective";
+    } else if (x > n) {
+        cout << "excessive";
+    } else {
+        cout << "none";
+    }
+
+    cin.get();
+    cin.get();
+    return 0;
+}
