@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main() {
+string str;
+getline(cin, str);
+str.erase(unique(str.begin(), str.end(), [](char a, char b) {
+        return isspace(a) && isspace(b);
+    }), str.end());
+cout << str <<endl;
+cin.get();
+cin.get();
+return 0;
+}
