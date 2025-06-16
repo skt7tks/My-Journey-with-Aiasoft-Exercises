@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+char x;
+cin >> x;
+int n;
+cin >> n;
+n = (n % 26 + 26) % 26;
+char y = 'a' + (x - 'a' + n) % 26;
+cout << y << endl;
+cin.get();
+cin.get();
+return 0;
+}
