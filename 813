@@ -1,0 +1,27 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+    reverse(s.begin(), s.end());
+    int x = stoi(s);
+    int n = s.size();
+    int count = 0;
+
+    int y= sqrt(x);
+
+    for (int i = 1; i <= y; i++) {
+        if (x % i == 0) {
+            count += 2;
+            if (i == x / i) {
+                count--;
+            }
+        }
+    }
+
+    cout << x << " " << count << endl;
+    return 0;
+}
