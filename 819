@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+int main() {
+string s;
+cin >> s;
+reverse(s.begin(), s.end());
+int n=s.size();
+
+long long x = stoi(s);
+long long y=x%100;
+long long z=0;
+for (long long i=1; i<=y; i++){
+    if (y%i==0){
+        z+=i;
+    }
+}
+cout<<x<<" "<<z;
+cin.get();
+cin.get();
+return 0;
+}
