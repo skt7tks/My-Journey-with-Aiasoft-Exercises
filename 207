@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+int a, b, c;
+int x, y, z;
+cin>>a>>b>>c;
+cin>>x>>y>>z;
+
+int q=a+2*b+3*c;
+int p=x+2*y+3*z;
+if (q>p) {cout<<"YES";}
+    else {cout<<"NO";}
+
+cin.get();
+cin.get();
+return 0;
+}
