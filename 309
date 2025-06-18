@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+int a;
+cin>>a;
+a=a%1000;
+int x=a/100;
+a=a%100;
+int y=a/10;
+cout<<x+y<<endl;
+
+cin.get();
+cin.get();
+return 0;
+}
