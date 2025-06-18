@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+string s;
+cin >> s;
+char t = s[1];
+s = string(1, s[0]) + string(1, s[2]);
+int n = stoi(s);
+int y = n / 10 + n % 10;
+int z = n / 10 - n % 10;
+if (t == '+') {
+    cout << y << endl;
+} else {
+    cout << z << endl;
+}
+cin.get();
+cin.get();
+return 0;
+}
