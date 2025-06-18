@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+char s;
+cin>>s;
+if (s>=48 && s<=57) {cout<<"YES";}
+    else {cout<<"NO";}
+
+
+cin.get();
+cin.get();
+return 0;
+}
